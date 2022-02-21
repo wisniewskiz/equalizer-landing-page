@@ -11,6 +11,7 @@
 html, h1, h2, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*  TYPOGRAPHY */
@@ -28,8 +29,12 @@ h1 {
 
 h2 {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.footer__email {
+    font-weight: 700;
 }
 
 .body1 {
@@ -74,6 +79,11 @@ button {
 
 }
 
+#ios:hover {
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
 #android {
     background-color: var(--white);
     color: var(--black);
@@ -93,6 +103,16 @@ button {
 
 }
 
+#android:hover {
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+
+.footer__socials--icon:hover {
+    cursor: pointer;
+    filter: invert(66%) sepia(70%) saturate(3648%) hue-rotate(327deg) brightness(102%) contrast(96%);
+}
+
 /*  ELEMENTS */
 .sub__wrapper {
     background-color: var(--red);
@@ -107,12 +127,16 @@ button {
 
 
 /*  MEDIA QUERIES */
-@media only screen and (max-width: 376px) {
+
+/* MOBILE */
+@media only screen and (max-width: 636px) {
     body {
         background-image: url('assets/bg-main-mobile.png');
         background-repeat: no-repeat;
         background-color: var(--white);
         background-position:top -104px right -159px;
+        display: flex;
+        justify-content: center;
     }
 
     h1 {
@@ -130,6 +154,7 @@ button {
     header{
         padding: 40px 24px 64px;
     }
+
     .cta__wrapper {
         padding: 0px 24px 68px;
     }
@@ -177,7 +202,6 @@ button {
     }
 
     .footer__email {
-        font-weight: 700;
         display: block;
     }
 
@@ -194,5 +218,237 @@ button {
 
     #ios {
         margin-top: 32px;
+    }
+}
+
+/* TABLET */
+@media only screen and (min-width: 636px) and (max-width: 1013px) {
+    h1 {
+        font-size: 64px;
+        letter-spacing: -0.73px;
+        line-height: 64px;
+    }
+    .cta__body--text, .sub__body--text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    body {
+        background-image: url('assets/bg-main-tablet.png');
+        background-size: 983px 808px;
+        background-position: top -112px left -254px;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        background-image: url('assets/bg-pattern-1.svg');
+        background-repeat: no-repeat;
+        background-size: 266.67px 400px;
+        background-position: top -32px right -35.67px;
+        padding: 0px 39px;
+    }
+
+    header {
+        padding: 61.99px 0px 95.01px;
+    }
+
+    .cta__wrapper {
+        width: 520px;
+        margin-bottom: 249px;
+    }
+
+    .cta__header {
+        margin-bottom: 28px;
+    }
+
+    .hero {
+        height: 600px;
+        width: 100%;
+        background: var(--black);
+        border-radius: 12px;
+        display: flex;
+        background-image: url('assets/bg-pattern-2.svg');
+        background-size: 280px 420px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .hero__image {
+        position: relative;
+        top: -138px;
+        left: 64px;
+        z-index: 1;
+    }
+    #phone {
+        width: 270.21px;
+        height: 556px;
+    }
+
+    .sub__wrapper {
+        width: 399px;
+        padding: 48px;
+        position: relative;
+        top: 150px;
+        right: 58px;
+        z-index: 2;
+    }
+
+    .sub__header {
+        margin-bottom: 12px;
+    }
+
+    .sub__body {
+        margin-bottom: 36px;
+    }
+
+    .sub__price {
+        margin-bottom: 32px;
+    }
+
+    footer {
+        margin-top: 183px;
+        margin-bottom: 85px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__logo {
+        width: 100%;
+        margin-bottom: 32.01px;
+    }
+
+    .footer__bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__copyright {
+        width: 366px;
+    }
+
+    .footer__socials {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1013px){
+    h1 {
+        font-size: 88px;
+        letter-spacing: -1px;
+        line-height: 88px;
+    }
+    .cta__body--text, .sub__body--text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+    }
+
+    body {
+        background-image: url('assets/bg-main-desktop.png');
+        background-repeat: no-repeat;
+        background-position: top -112px left -146px;
+    }
+
+    .container {
+        background-image: url('assets/bg-pattern-1.svg');
+        background-repeat: no-repeat;
+        background-size: 312px 468px;
+        background-position: top -40px right;
+        padding: 0px 165px;
+    }
+
+    header {
+        padding: 61.99px 0px 127.01px;
+    }
+
+    .cta__wrapper {
+        padding-right: 294px;
+        margin-bottom: 321px;
+    }
+
+    .cta__header {
+        margin-bottom: 40px;
+    }
+
+    .hero {
+        height: 600px;
+        width: 100%;
+        background: var(--black);
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        background-image: url('assets/bg-pattern-2.svg');
+        background-size: 312px 468px;
+        background-position: top -40px left 336px;
+        background-repeat: no-repeat;
+    }
+    
+    .hero__image {
+        position: relative;
+        top: -213px;
+        left: 102px;
+        z-index: 1;
+    }
+    #phone {
+        width: 312px;
+        height: 642px;
+    }
+
+    .sub__wrapper {
+        width: 399px;
+        padding: 58px 59px 48px 54px;
+        position: relative;
+        top: 90px;
+        right: 95px;
+        z-index: 2;
+    }
+
+    .sub__header {
+        margin-bottom: 12px;
+    }
+
+    .sub__body {
+        margin-bottom: 36px;
+    }
+
+    .sub__price {
+        margin-bottom: 32px;
+    }
+
+    footer {
+        margin-top: 201.99px;
+        margin-bottom: 91px;
+        display: flex;
+        width: 100%;
+    }
+
+    .footer__logo {
+        width: 146.09px;
+        margin-right: 137.76px;
+    }
+
+    .footer__bottom {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__copyright {
+        width: 366px;
+    }
+
+    .footer__socials {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
     }
 }

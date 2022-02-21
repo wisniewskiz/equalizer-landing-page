@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
+  <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   
   <title>Frontend Mentor | Equalizer landing page</title>
@@ -48,8 +49,8 @@
           </div>
           <div class="sub__price"><span id="price">$4</span> / month</div>
           <div class="sub__buttons">
-            <button id="ios">iOS Download</button>
-            <button id="android">Android Download</button>
+            <a href="#" target="_blank"><button id="ios">iOS Download</button></a>
+            <a href="#" targe="_blank"><button id="android">Android Download</button></a>
           </div>
         </div>
     </section>
@@ -57,14 +58,16 @@
       <div class="footer__logo">
         <img src="assets/logo.svg">
       </div>
-      <div class="footer__copyright">
-        All rights reserved © Equalizer 2021
-        Have any problems? Contact us via social media or email us at <span class="footer__email">equalizer@example.com</span>
-      </div>
-      <div class="footer__socials">
-        <img src="assets/icon-facebook.svg">
-        <img src="assets/icon-instagram.svg">
-        <img src="assets/icon-twitter.svg">
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          All rights reserved © Equalizer 2021
+          Have any problems? Contact us via social media or email us at <span class="footer__email">equalizer@example.com</span>
+        </div>
+        <div class="footer__socials">
+          <a href="#" target="_blank"><img src="assets/icon-facebook.svg" class="footer__socials--icon"></a>
+          <a href="#" target="_blank"><img src="assets/icon-instagram.svg" class="footer__socials--icon"></a>
+          <a href="#" taget="_blank"><img src="assets/icon-twitter.svg" class="footer__socials--icon"></a>
+        </div>
       </div>
     </footer>
   </div>
